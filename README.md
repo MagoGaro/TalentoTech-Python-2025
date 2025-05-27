@@ -1,7 +1,7 @@
 
 # Trabajo Final
 
-[![Badge de estado](https://img.shields.io/badge/estado-activo-brightgreen)](https://github.com/tu-usuario/tu-repositorio)
+[![Badge de estado](https://img.shields.io/badge/estado-activo-brightgreen)](https://github.com/MagoGaro/TalentoTech-Python-2025)
 
 Gestor de productos
 
