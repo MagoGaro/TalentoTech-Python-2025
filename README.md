@@ -19,3 +19,4 @@ Gestor de productos
 | Versión basica          |   0.1    |
 | Se realizan modificaciones a la versión anterior          |   0.2    |
 | Se agrega uso de diccionarios y funciones          |   0.3    |
+| Se realiza modulación y guardado en archivo          |   0.4    |
