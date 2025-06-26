@@ -57,7 +57,8 @@ source test/bin/activate
 
 🖼️ Vista previa
 Comprobación visual del entorno virtual activo:
-  ![Imagen de comprobación](img/comprobar_venv.png)
+<br>
+![Imagen de comprobación](img/comprobar_venv.png)
   
   ### 3. Instalar dependencias
 
