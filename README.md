@@ -66,7 +66,7 @@ pip install -r requirements.txt
 ```
 
 📄 Licencia
-Este proyecto está bajo una licencia de uso libre con fines educativos. Podés usarlo, modificarlo y compartirlo siempre y cuando menciones al autor.
+Este proyecto está bajo una **licencia de uso libre** con fines educativos. Podés usarlo, modificarlo y compartirlo siempre y cuando menciones al autor.
 
 ✍️ Autor
 - Gabriel Sebastián Román
