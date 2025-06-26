@@ -1,1 +1,5 @@
-pre-entrega/V0.4/funcionalidad/__pycache__
+__pycache__/
+**/__pycache__/
+
+test/
+**/test/
