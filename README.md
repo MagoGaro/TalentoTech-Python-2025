@@ -12,7 +12,7 @@ Gestor de productos
 - Eliminar productos
 - Validación basica de entrada de datos
 
-## Instalación
+## Tabla de Versiones
 
 | Detalle |  Versión |
 |----------------|----------|
