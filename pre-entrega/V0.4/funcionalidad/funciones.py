@@ -1,4 +1,5 @@
 import os
+import json
 
 def limpiar():
     if os.name == 'nt':
@@ -69,7 +70,7 @@ def listar(lista, accion='listar' , busqueda = ''):
 def borrar(lista,id):
     producto_a_borrar = None
     for producto in lista:
-        if producto['id'] == id:
+        if producto['id'] == int(id):
             producto_a_borrar = producto
             break
     
@@ -101,3 +102,17 @@ def borrar(lista,id):
         
     input("Presione 'enter' para continuar.")
     limpiar()
+
+def cargar_productos(archivo=os.path.join(os.path.dirname(__file__), '../archivos', 'productos.json')):
+    try:
+        with open(archivo, 'r') as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return []
+    
+def guardar_productos(lista, archivo=os.path.join(os.path.dirname(__file__), '../archivos', 'productos.json')):
+    try:
+        with open(archivo, 'w') as f:
+            json.dump(lista, f, indent=4)
+    except Exception as e:
+        print(f"Error al guardar productos: {e}")

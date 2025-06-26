@@ -1,6 +1,6 @@
 import funcionalidad.funciones as f
 
-productos = []
+productos = f.cargar_productos()
 
 print("\n\nSistema de gestion de productos\n\n".center(50))
 while True:
@@ -24,6 +24,7 @@ while True:
                                     'precio': int(precio)
                                 }
                                 productos.append(nuevo_producto)
+                                f.guardar_productos(productos)
                                 print(f"Producto {nombre.capitalize()} agregado exitosamente.")
                                 input("Presione 'enter' para continuar.")
                                 f.limpiar()
@@ -53,6 +54,7 @@ while True:
         id_borrar = input("Ingrese el ID del producto que desa borrar: ")
 
         f.borrar(productos,id_borrar)
+        f.guardar_productos(productos)
 
     elif menu == '5':
         print("Saliendo del sistema...")
