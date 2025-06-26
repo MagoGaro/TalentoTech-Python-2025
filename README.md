@@ -9,6 +9,7 @@ Gestor de productos
 
 - Agregar productos
 - Listar productos
+- Editar productos (desde la V0.5)
 - Eliminar productos
 - Validación basica de entrada de datos
 
