@@ -1,48 +1,72 @@
+# 🧪 Trabajo Final – Gestor de Productos
 
-# Trabajo Final
+![Lenguaje](https://img.shields.io/github/languages/top/MagoGaro/TalentoTech-Python-2025) [![Estado](https://img.shields.io/badge/estado-activo-brightgreen)](https://github.com/MagoGaro/TalentoTech-Python-2025) ![Python](https://img.shields.io/badge/python-3.13+-blue.svg) ![Licencia](https://img.shields.io/badge/licencia-uso%20libre-brightgreen) ![Tamaño del repo](https://img.shields.io/github/repo-size/MagoGaro/TalentoTech-Python-2025)
 
-[![Badge de estado](https://img.shields.io/badge/estado-activo-brightgreen)](https://github.com/MagoGaro/TalentoTech-Python-2025)
+---
 
-Gestor de productos
+## 📦 Descripción
 
-## Características principales
+**Gestor de Productos** es una aplicación de consola escrita en Python. Permite gestionar productos mediante operaciones básicas como agregar, listar, buscar, editar y eliminar. A partir de la versión 0.4 incluye persistencia de datos en archivos, y desde la versión 0.5 incorpora mejoras visuales con `colorama` y edición de productos.
 
-- Agregar productos
-- Listar productos
-- Editar productos (desde la V0.5)
-- Eliminar productos
-- Validación basica de entrada de datos
+---
 
-## Tabla de Versiones
+## 🚀 Funcionalidades
 
-| Detalle |  Versión |
-|----------------|----------|
-| Versión basica          |   0.1    |
-| Se realizan modificaciones a la versión anterior          |   0.2    |
-| Se agrega uso de diccionarios y funciones          |   0.3    |
-| Se realiza modulación y guardado en archivo          |   0.4    |
-| Se agrega el uso de Coloroma y la edicion de prodcutos          |   0.5    |
+- ✅ Agregar productos
+- 📃 Listar productos
+- 🕵️ **Buscar productos** *Proximamente*
+- 📝 **Editar productos** *(desde V0.5)*
+- 🗑️ Eliminar productos
+- 🔒 Validación básica de entrada de datos
 
-<br>
-<br>
+---
 
-### Instalación librerias
+## 🗂️ Tabla de Versiones
 
-###### Para todas las versiones que lo requieran, se recomienda el uso de un Entorno Virtual
+| Versión | Detalle                                                             |
+|---------|---------------------------------------------------------------------|
+| 0.1     | Versión básica                                                      |
+| 0.2     | Mejoras y correcciones iniciales                                   |
+| 0.3     | Se agregan diccionarios y uso de funciones                         |
+| 0.4     | Modularización y persistencia en archivo JSON                      |
+| 0.5     | Se integra Colorama y se agrega funcionalidad para editar productos |
 
-- V0.5
-  - Primero creamos el entorno, para eso nos situamos en una carpeta y abrimos la termina (recomiendo gitbash)
-  <pre> py -m venv [el nombre que le querramos dar por ejemplo **test**] </pre>
-  el comando **py** puede variar según el sistema en el que estemos, puede ser **python** o **python3**.
+---
 
-  - Continuamos levantando el entorno
-  <pre> source test/Scripts/activate </pre>
+## 🛠 Instalación de dependencias
 
-  - Comprobamos que el entorno se haya iniciado correctamente, para eso en nuestra terminal debemos ver el nombre de nuestro entorno entre parentesis (test) al inicio.
+> ⚠️ Para versiones como la **V0.5**, se recomienda usar un **entorno virtual**.
 
-  ![Imagen de comprobación](img/comprobar_venv.png))
+### 1. Crear el entorno virtual
+
+```bash
+python -m venv test
+```
+📌 En algunos sistemas puede usarse python3 o py en lugar de python.
+
+### 2. Activar el entorno
+
+```bash
+# En Windows
+test\Scripts\activate
+
+# En macOS/Linux
+source test/bin/activate
+```
+✔️ Deberías ver el nombre del entorno al inicio de la línea de comandos: (test)
+
+🖼️ Vista previa
+Comprobación visual del entorno virtual activo:
+  ![Imagen de comprobación](img/comprobar_venv.png)
   
+  ### 3. Instalar dependencias
 
-  - Continuamos instalando las librerias necesarias por medio del archivo *requirements.txt*
+  ```bash
+pip install -r requirements.txt
+```
 
-  <pre>pip install -r requirements.txt</pre>
+📄 Licencia
+Este proyecto está bajo una licencia de uso libre con fines educativos. Podés usarlo, modificarlo y compartirlo siempre y cuando menciones al autor.
+
+✍️ Autor
+- Gabriel Sebastián Román
