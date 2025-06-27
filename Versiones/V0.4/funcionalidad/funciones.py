@@ -2,12 +2,21 @@ import os
 import json
 
 def limpiar():
+    """
+    Limpia la consola, independientemente del sistema en el que estemos
+    """
     if os.name == 'nt':
         os.system('cls')
     else:
         os.system('clear')
 
 def gestionar_id(accion = 'obtener',archivo= os.path.join(os.path.dirname(__file__), '../archivos', 'id.txt')):
+    """
+    Puede recibir dos parametros:
+    Acción  -> Nos dira si obtenemos o incrementamos el ID
+               Por defecto es Obtener
+    Archivo -> Espera un archivo donde se guarda el ID
+    """
     try:
         if accion == 'obtener':
             try:
@@ -29,6 +38,11 @@ def gestionar_id(accion = 'obtener',archivo= os.path.join(os.path.dirname(__file
 
 
 def listar(lista, accion='listar' , busqueda = ''):
+    """
+    Esepera un array
+
+    Tambien puede recibir una accion y un parametro de busqueda
+    """
     if not lista:
         print("\n\nNo hay productos disponibles.\n\n" if accion == 'listar' else 
               f"\n\nNo hay coincidencias para '{busqueda}'.\n\n")
@@ -68,6 +82,10 @@ def listar(lista, accion='listar' , busqueda = ''):
 
 
 def borrar(lista,id):
+    """
+    Recibe una Lista y un ID
+    Elimina el elemento con ese ID
+    """
     producto_a_borrar = None
     for producto in lista:
         if producto['id'] == int(id):
@@ -104,6 +122,9 @@ def borrar(lista,id):
     limpiar()
 
 def cargar_productos(archivo=os.path.join(os.path.dirname(__file__), '../archivos', 'productos.json')):
+    """
+    Recibe un archivo JSON y lo rertona
+    """
     try:
         with open(archivo, 'r') as f:
             return json.load(f)
@@ -111,6 +132,10 @@ def cargar_productos(archivo=os.path.join(os.path.dirname(__file__), '../archivo
         return []
     
 def guardar_productos(lista, archivo=os.path.join(os.path.dirname(__file__), '../archivos', 'productos.json')):
+    """
+    Recibe una lista y un archivo
+    guarda la lista en el archivo
+    """
     try:
         with open(archivo, 'w') as f:
             json.dump(lista, f, indent=4)
