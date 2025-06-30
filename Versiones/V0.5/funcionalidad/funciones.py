@@ -80,6 +80,18 @@ def listar(lista, accion='listar' , busqueda = ''):
         for producto in resultados:
             fila = [str(producto[clave]) for clave in cabecera]
             print('|'.join((str(dato).capitalize()).center(15) for dato in fila))
+    
+    elif accion == 'editar':
+        if busqueda.isdigit():
+            resultado = [producto for producto in lista 
+                     if busqueda in str(producto['id'])]
+        else:
+            resultado = [producto for producto in lista 
+                     if busqueda.lower() in producto['nombre'].lower()]
+        
+        return resultado
+        
+
 
 
 def borrar(lista,id):
@@ -142,3 +154,25 @@ def guardar_productos(lista, archivo=os.path.join(os.path.dirname(__file__), '..
             json.dump(lista, f, indent=4)
     except Exception as e:
         print(f"{Fore.RED}Error al guardar productos: {e}")
+
+def editar_producto(lista,buscando):
+    """
+    Recibe una Lista
+    Busca el elemento en la lista y da al usuario la opcion de editarlo
+    """
+    producto = listar(lista, accion='editar' , busqueda = buscando)
+
+    nombre = input("Ingrese nuevo nombre del producto: ")
+    categoria = input("Ingrese nueva categoria del producto: ")
+    precio = input("Ingrese nuevo precio del producto: ")
+
+    if nombre:
+        producto[0]["nombre"] = nombre
+    if categoria:
+        producto[0]["categoria"] = categoria
+    if precio:
+        producto[0]["precio"] = precio
+    
+    guardar_productos(lista)
+    print(f"\n{Fore.GREEN}Producto {nombre} actualizado correctamente.{Style.RESET_ALL}")
+    return True

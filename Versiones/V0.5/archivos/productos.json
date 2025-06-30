@@ -1,8 +1,14 @@
 [
     {
         "id": 4,
-        "nombre": "banana",
+        "nombre": "bananon",
         "categoria": "frutas",
         "precio": 33
+    },
+    {
+        "id": 6,
+        "nombre": "frutilla",
+        "categoria": "frutas",
+        "precio": 55
     }
 ]

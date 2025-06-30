@@ -13,7 +13,7 @@ print(Fore.WHITE+Back.BLUE+"Sistema de gestión de productos".center(50))
 print("\n\n")
 
 while True:
-    menu =input("Menu:\n1- Agregar producto\n2- Mostrar productos\n3- Buscar producto\n4- Eliminar producto\n5- Salir\nSeleccione una opción: ")
+    menu =input("Menu:\n1- Agregar producto\n2- Mostrar productos\n3- Editar producto\n4- Buscar producto\n5- Eliminar producto\n6- Salir\nSeleccione una opción: ")
 
     if menu == '1':
         while True:
@@ -52,22 +52,40 @@ while True:
         print("\n")
         input(f"Presione {Fore.BLUE}'enter'{Style.RESET_ALL} para continuar.")
         f.limpiar()
-
+    
     elif menu == '3':
+        
+        while True:
+            buscar = input("Ingrese nombre o ID del producto: ")
+            if buscar.strip().isdigit() or buscar.strip():
+                retorno = f.editar_producto(productos,buscar)
+            else:
+                print(f"\n{Fore.BLUE}El valor ingresado es incorrecto, intente de nuevo.{Style.RESET_ALL}")
+            
+            if retorno:
+                break
+            else:
+                input(f"\n{Fore.RED}Ocurrio un error al actualizar el producto {buscar} presione 'enter' para vovler al menu.{Style.RESET_ALL}")
+                break
+        print("\n")
+        input(f"Presione {Fore.BLUE}'enter'{Style.RESET_ALL} para continuar.")
+        f.limpiar()
+
+    elif menu == '4':
         buscar = input("Ingrese nombre completo o parcial del producto a buscar: ") 
         
         f.listar(productos,'buscar',buscar)
         print("\n")
         input(f"Presione {Fore.BLUE}'enter'{Style.RESET_ALL} para continuar.")
         f.limpiar()
-        
-    elif menu == '4':
+    
+    elif menu == '5':
         id_borrar = input("Ingrese el ID del producto que desa borrar: ")
 
         f.borrar(productos,id_borrar)
         f.guardar_productos(productos)
 
-    elif menu == '5':
+    elif menu == '6':
         print(f"{Fore.MAGENTA}Saliendo del sistema...")
         break
     else:
