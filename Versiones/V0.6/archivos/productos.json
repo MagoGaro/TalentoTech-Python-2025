@@ -1,0 +1,38 @@
+[
+    {
+        "id": 4,
+        "nombre": "banani",
+        "categoria": "frutas",
+        "precio": 33
+    },
+    {
+        "id": 6,
+        "nombre": "frutilla",
+        "categoria": "frutas",
+        "precio": 55
+    },
+    {
+        "id": 7,
+        "nombre": "lechuga",
+        "categoria": "verdura",
+        "precio": 44
+    },
+    {
+        "id": 9,
+        "nombre": "lechuga",
+        "categoria": "verdura",
+        "precio": 44
+    },
+    {
+        "id": 10,
+        "nombre": "lechuga",
+        "categoria": "verdura",
+        "precio": 44
+    },
+    {
+        "id": 11,
+        "nombre": "banana",
+        "categoria": "fruta",
+        "precio": 22
+    }
+]
