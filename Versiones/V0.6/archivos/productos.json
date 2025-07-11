@@ -3,36 +3,42 @@
         "id": 4,
         "nombre": "banani",
         "categoria": "frutas",
-        "precio": 33
+        "precio": 33,
+        "cantidad": 10
     },
     {
         "id": 6,
         "nombre": "frutilla",
         "categoria": "frutas",
-        "precio": 55
+        "precio": 55,
+        "cantidad": 2
     },
     {
         "id": 7,
         "nombre": "lechuga",
         "categoria": "verdura",
-        "precio": 44
+        "precio": 44,
+        "cantidad": 220
     },
     {
         "id": 9,
         "nombre": "lechuga",
         "categoria": "verdura",
-        "precio": 44
+        "precio": 44,
+        "cantidad": 25
     },
     {
         "id": 10,
         "nombre": "lechuga",
         "categoria": "verdura",
-        "precio": 44
+        "precio": 44,
+        "cantidad": 5
     },
     {
         "id": 11,
         "nombre": "banana",
         "categoria": "fruta",
-        "precio": 22
+        "precio": 22,
+        "cantidad": 100
     }
 ]

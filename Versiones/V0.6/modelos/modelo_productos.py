@@ -14,7 +14,8 @@ class ModeloProductos:
             'id': nuevo_id,
             'nombre': datos_producto['nombre'],
             'categoria': datos_producto['categoria'],
-            'precio': datos_producto['precio']
+            'precio': datos_producto['precio'],
+            'cantidad': datos_producto['cantidad']
         }
     
     def obtener_todos_productos(self):
@@ -29,6 +30,7 @@ class ModeloProductos:
         producto_existente['nombre'] = nuevos_datos.get('nombre', producto_existente['nombre'])
         producto_existente['categoria'] = nuevos_datos.get('categoria', producto_existente['categoria'])
         producto_existente['precio'] = nuevos_datos.get('precio', producto_existente['precio'])
+        producto_existente['cantidad'] = nuevos_datos.get('cantidad', producto_existente['cantidad'])
 
     def eliminar_producto(self, productos_a_eliminar):
         for producto in productos_a_eliminar:

@@ -25,8 +25,10 @@ class ControladorProductos:
             elif opcion == '4':
                 self.buscar_producto()
             elif opcion == '5':
-                self.eliminar_producto()
+                self.stock_producto()
             elif opcion == '6':
+                self.eliminar_producto()
+            elif opcion == '7':
                 self.vista.mostrar_mensaje("Saliendo del sistema...", color=Fore.MAGENTA)
                 break
             else:
@@ -85,3 +87,6 @@ class ControladorProductos:
                 self.vista.mostrar_mensaje("Producto no encontrado.", color=Fore.RED)
 
             self.vista.pausar()
+    
+    def stock_producto(self):
+        pass

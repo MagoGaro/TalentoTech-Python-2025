@@ -17,7 +17,8 @@ class VistaProductos:
         return input(
             "Menú:\n1- Agregar producto\n2- Mostrar productos\n"
             "3- Editar producto\n4- Buscar producto\n"
-            "5- Eliminar producto\n6- Salir\n"
+            "5- Stock producto\n"
+            "6- Eliminar producto\n7- Salir\n"
             "Seleccione una opción: "
         )
     
@@ -33,11 +34,13 @@ class VistaProductos:
         nombre = self.validaciones.validar_nombre("Ingrese nombre del producto: ")
         categoria = self.validaciones.validar_categoria("Ingrese categoría del producto: ")
         precio = self.validaciones.validar_precio("Ingrese precio del producto: ")
+        cantidad = self.validaciones.validar_precio("Ingrese cantidad del producto: ")
         
         return {
             'nombre': nombre.lower(),
             'categoria': categoria.lower(),
-            'precio': precio
+            'precio': precio,
+            'cantidad': cantidad
         }
     
     def obtener_termino_busqueda(self, mensaje):
@@ -47,6 +50,7 @@ class VistaProductos:
         nombre = input("Ingrese nuevo nombre del producto (dejar vacío para no cambiar): ").strip()
         categoria = input("Ingrese nueva categoría del producto (dejar vacío para no cambiar): ").strip()
         precio = input("Ingrese nuevo precio del producto (dejar vacío para no cambiar): ").strip()
+        cantidad = input("Ingrese la nueva cantidad del producto (dejar vacío para no cambiar): ").strip()
         
         datos = {}
         if nombre:
@@ -55,6 +59,8 @@ class VistaProductos:
             datos['categoria'] = categoria.lower()
         if precio:
             datos['precio'] = int(precio)
+        if cantidad:
+            datos['cantidad'] = int(cantidad)
         
         return datos
     
@@ -90,7 +96,7 @@ class VistaProductos:
         
         encabezados = productos[0].keys()
         print('|'.join((encabezado.capitalize()).center(15) for encabezado in encabezados))
-        print('-' * 65)
+        print('-' * 80)
 
         for producto in productos:
             fila = [str(producto[clave]) for clave in encabezados]
