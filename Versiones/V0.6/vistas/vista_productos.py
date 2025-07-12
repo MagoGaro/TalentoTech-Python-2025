@@ -93,11 +93,27 @@ class VistaProductos:
         
         if accion == 'buscar':
             print(f"\n\nResultados de búsqueda para {Fore.YELLOW}'{termino_busqueda}':")
+        elif accion == 'stock':
+            print(f"\n\n{Fore.CYAN}Productos ordenados por stock (de mayor a menor):")
         
         encabezados = productos[0].keys()
         print('|'.join((encabezado.capitalize()).center(15) for encabezado in encabezados))
         print('-' * 80)
 
         for producto in productos:
-            fila = [str(producto[clave]) for clave in encabezados]
-            print('|'.join((str(dato).capitalize()).center(15) for dato in fila))
+            fila = []
+            for clave in encabezados:
+                valor = str(producto[clave]).capitalize()
+                if clave == 'cantidad' and producto['cantidad'] <= 5:
+                    valor = f"{Fore.RED}{valor}{Style.RESET_ALL}"
+                fila.append(valor)
+            print('|'.join(dato.center(15) for dato in fila))
+    
+    def obtener_valor_minimo_stock(self):
+        while True:
+            valor = input("Ingrese el valor mínimo de stock para filtrar (dejar vacío para mostrar todos): ").strip()
+            if not valor:
+                return None
+            if valor.isdigit():
+                return int(valor)
+            print(f"{Fore.RED}Valor inválido. Debe ser un número entero.{Style.RESET_ALL}")

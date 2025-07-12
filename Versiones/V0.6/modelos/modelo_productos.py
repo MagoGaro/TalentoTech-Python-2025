@@ -36,4 +36,10 @@ class ModeloProductos:
         for producto in productos_a_eliminar:
             if producto in self.productos:
                 self.productos.remove(producto)
-    
+
+    def filtrar_por_stock(self, valor_minimo=None):
+        if valor_minimo is None:
+            return sorted(self.productos, key=lambda x: x['cantidad'], reverse=True)
+        
+        productos_filtrados = [p for p in self.productos if p['cantidad'] <= valor_minimo]
+        return sorted(productos_filtrados, key=lambda x: x['cantidad'], reverse=True)

@@ -7,7 +7,3 @@ class UtilidadesVisuales:
     
     def mostrar_mensaje(self, mensaje, color=Fore.WHITE):
         print(color + mensaje + Style.RESET_ALL)
-    
-    def formatear_tabla(self, datos, encabezados):
-        # Implementación para formatear datos en tabla
-        pass
