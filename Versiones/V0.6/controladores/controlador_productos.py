@@ -92,7 +92,9 @@ class ControladorProductos:
         valor_minimo = self.vista.obtener_valor_minimo_stock()
         productos_filtrados = self.modelo.filtrar_por_stock(valor_minimo)
         
-        mensaje = "Productos con stock bajo:" if valor_minimo is not None else "Todos los productos:"
-        self.vista.mostrar_mensaje(mensaje, color=Fore.CYAN)
-        self.vista.mostrar_lista_productos(productos_filtrados)
+        if valor_minimo is not None:
+            mensaje = f"Productos con stock {Fore.CYAN}≤ {valor_minimo}{Style.RESET_ALL}, ordenados por stock:"
+            self.vista.mostrar_mensaje(mensaje)
+        
+        self.vista.mostrar_lista_productos(productos_filtrados, 'stock')
         self.vista.pausar()
