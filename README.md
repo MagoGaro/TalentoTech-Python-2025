@@ -1,6 +1,6 @@
 # 🔨 Trabajo Final – Gestor de Productos
 
-![Lenguaje](https://img.shields.io/github/languages/top/MagoGaro/TalentoTech-Python-2025) [![Estado](https://img.shields.io/badge/estado-activo-brightgreen)](https://github.com/MagoGaro/TalentoTech-Python-2025) ![Python](https://img.shields.io/badge/python-3.13+-blue.svg) ![Licencia](https://img.shields.io/badge/licencia-uso%20libre-brightgreen) ![Tamaño del repo](https://img.shields.io/github/repo-size/MagoGaro/TalentoTech-Python-2025)
+![Lenguaje](https://img.shields.io/github/languages/top/MagoGaro/TalentoTech-Python-2025) [![Estado](https://img.shields.io/badge/estado-activo-brightgreen)](https://github.com/MagoGaro/TalentoTech-Python-2025) ![Python](https://img.shields.io/badge/python-3.13+-blue.svg) ![Licencia](https://img.shields.io/badge/licencia-uso%20libre-brightgreen) ![Tamaño del repo](https://img.shields.io/github/repo-size/MagoGaro/TalentoTech-Python-2025) [![Creador](https://img.shields.io/badge/Creador-MagoGaro-blue?style=flat&logo=github)](https://github.com/MagoGaro)
 
 ---
 
