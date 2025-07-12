@@ -32,7 +32,7 @@
 | 0.4     | Modularización y persistencia en archivo JSON                      |
 | 0.5     | Se integra Colorama y se agrega funcionalidad para editar productos |
 | 0.6     | Se agrega funcionalidad para stock de productos y se refactoriza a MVC |
-
+| 0.7     | Se actualiza a Base De Datos (SQLLite) en lugar de JSON |
 ---
 
 ## 🛠 Instalación de dependencias
